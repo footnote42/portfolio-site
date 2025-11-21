@@ -1,4 +1,9 @@
+import ProjectCard from './components/ProjectCard';
+import { projects } from './data/projects';
+
 export default function Home() {
+  const featuredProjects = projects.filter(p => p.featured);
+  
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-slate-900">
       <nav className="border-b border-stone-200 dark:border-slate-800">
@@ -23,21 +28,36 @@ export default function Home() {
       </nav>
 
       <main className="max-w-6xl mx-auto px-4 py-16">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mb-16">
           <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
             I build practical tools that save volunteer coaches time. Rugby session planners, 
             PowerBI automations, and experiments in learning.
           </p>
         </div>
 
-        <div className="mt-16">
+        <section id="projects">
           <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-8">
-            Coming Soon
+            Featured Projects
           </h2>
-          <p className="text-slate-600 dark:text-slate-400">
-            Portfolio under construction. Check back soon.
-          </p>
-        </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+
+          <div className="mt-16">
+            <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-8">
+              All Projects
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="border-t border-stone-200 dark:border-slate-800 mt-32">
