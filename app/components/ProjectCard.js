@@ -9,13 +9,11 @@ export default function ProjectCard({ project }) {
   
   const statusColor = statusColors[project.status] || 'bg-slate-400';
   
+  // Generate anchor ID from project name
+  const anchorId = project.name.toLowerCase().replace(/\s+/g, '-');
+  
   return (
-    <a 
-      href={project.homepage || project.githubUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-stone-200 dark:border-slate-700 hover:border-amber-600 dark:hover:border-amber-500 transition-colors"
-    >
+    <div className="group block bg-white dark:bg-slate-800 rounded-lg overflow-hidden border border-stone-200 dark:border-slate-700 hover:border-amber-600 dark:hover:border-amber-500 transition-colors">
       {/* Thumbnail with corner badge */}
       <div className="aspect-video bg-stone-100 dark:bg-slate-700 overflow-hidden relative">
         {project.image ? (
@@ -51,7 +49,7 @@ export default function ProjectCard({ project }) {
 
         {/* Tags */}
         {project.topics && project.topics.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             {project.topics.slice(0, 3).map((topic, index) => (
               <span 
                 key={index}
@@ -63,6 +61,24 @@ export default function ProjectCard({ project }) {
           </div>
         )}
 
+        {/* Action Buttons */}
+        <div className="flex gap-3 mt-4">
+          <a
+            href={`/projects#${anchorId}`}
+            className="flex-1 px-4 py-2 text-center text-sm text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-500 border border-stone-200 dark:border-slate-700 hover:border-amber-600 dark:hover:border-amber-500 rounded-lg transition-colors"
+          >
+            Learn More
+          </a>
+          <a
+            href={project.homepage || project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 px-4 py-2 text-center text-sm bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors font-medium"
+          >
+            Try It →
+          </a>
+        </div>
+
         {/* Hover reveal */}
         {project.hoverReveal && (
           <p className="mt-4 text-xs text-amber-600 dark:text-amber-500 opacity-0 group-hover:opacity-100 transition-opacity italic">
@@ -70,6 +86,6 @@ export default function ProjectCard({ project }) {
           </p>
         )}
       </div>
-    </a>
+    </div>
   );
 }

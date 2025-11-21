@@ -1,7 +1,10 @@
 import ProjectCard from './components/ProjectCard';
-import { projects } from './data/projects';
+import { getProjects } from './lib/getProjects';
 
-export default function Home() {
+export default async function Home() {
+  // Fetch projects at build time
+  const projects = await getProjects();
+  console.log('Projects data:', projects[0]); // Add this line
   const featuredProjects = projects.filter(p => p.featured);
   
   return (
