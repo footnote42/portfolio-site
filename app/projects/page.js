@@ -16,7 +16,7 @@ export default async function ProjectsPage() {
               <a href="/#projects" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
                 Projects
               </a>
-              <a href="#about" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
+              <a href="/about" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
                 About
               </a>
               <a href="#contact" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
@@ -138,7 +138,7 @@ export default async function ProjectsPage() {
       {/* Footer */}
       <footer className="border-t border-stone-200 dark:border-slate-800 mt-32">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-slate-400 dark:text-slate-600 italic">
             What stands in the way becomes the way.
           </p>
         </div>

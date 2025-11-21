@@ -19,7 +19,7 @@ export default async function Home() {
               <a href="#projects" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
                 Projects
               </a>
-              <a href="#about" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
+              <a href="/about" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
                 About
               </a>
               <a href="#contact" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
@@ -33,8 +33,9 @@ export default async function Home() {
       <main className="max-w-6xl mx-auto px-4 py-16">
         <div className="max-w-2xl mb-16">
           <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-            I build practical tools that save volunteer coaches time. Rugby session planners, 
-            PowerBI automations, and experiments in learning.
+            I'm a systems engineer learning to build software with AI collaboration. Coding's 
+            learning curve always felt too steep; until AI removed that excuse. Now I'm building 
+            time-saving tools for rugby coaches and exploring whatever makes me curious.
           </p>
         </div>
 
@@ -65,7 +66,7 @@ export default async function Home() {
 
       <footer className="border-t border-stone-200 dark:border-slate-800 mt-32">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-slate-400 dark:text-slate-600 italic">
             What stands in the way becomes the way.
           </p>
         </div>
