@@ -1,5 +1,6 @@
 import ProjectCard from './components/ProjectCard';
 import { getProjects } from './lib/getProjects';
+import Navigation from './components/Navigation';
 
 export default async function Home() {
   // Fetch projects at build time
@@ -9,27 +10,8 @@ export default async function Home() {
   
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-slate-900">
-      <nav className="border-b border-stone-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <h1 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
-              Wayne Ellis
-            </h1>
-            <div className="flex gap-6 text-sm">
-              <a href="#projects" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
-                Projects
-              </a>
-              <a href="/about" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
-                About
-              </a>
-              <a href="/contact" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      <Navigation />
+      
       <main className="max-w-6xl mx-auto px-4 py-16">
         <div className="max-w-2xl mb-16">
           <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Navigation from '../components/Navigation';
 
 export default function ContactPage() {
   const [status, setStatus] = useState('');
@@ -33,27 +34,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-slate-900">
-      {/* Navigation */}
-      <nav className="border-b border-stone-200 dark:border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <a href="/" className="text-xl font-semibold text-slate-800 dark:text-slate-100 hover:text-amber-600">
-              Wayne Ellis
-            </a>
-            <div className="flex gap-6 text-sm">
-              <a href="/#projects" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
-                Projects
-              </a>
-              <a href="/about" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
-                About
-              </a>
-              <a href="/contact" className="text-amber-600 dark:text-amber-500 font-medium">
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Main Content */}
       <main className="max-w-2xl mx-auto px-4 py-16">
@@ -107,7 +88,7 @@ export default function ContactPage() {
               id="message"
               name="message"
               required
-              rows="6"
+              rows={6}
               className="w-full px-4 py-2 border border-stone-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100"
               placeholder="What would you like to discuss?"
             />
