@@ -15,7 +15,7 @@ export default function AboutPage() {
               <a href="/about" className="text-amber-600 dark:text-amber-500 font-medium">
                 About
               </a>
-              <a href="#contact" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
+              <a href="/contact" className="text-slate-600 hover:text-amber-600 dark:text-slate-300">
                 Contact
               </a>
             </div>
