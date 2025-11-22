@@ -68,6 +68,7 @@ export default function ProjectCard({ project }) {
             className="flex-1 px-4 py-2 text-center text-sm text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-500 border border-stone-200 dark:border-slate-700 hover:border-amber-600 dark:hover:border-amber-500 rounded-lg transition-colors"
           >
             Learn More
+            <span className="sr-only"> about {project.name}</span>
           </a>
           <a
             href={project.homepage || project.githubUrl}
