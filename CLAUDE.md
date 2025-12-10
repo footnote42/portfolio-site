@@ -20,7 +20,7 @@ npm run lint
 
 ## Architecture Overview
 
-This is a **Next.js 16** portfolio site using the **App Router** with a hybrid JavaScript/TypeScript approach. The site showcases projects with data merged from GitHub API and custom descriptions.
+This is a **Next.js 16.0.3** portfolio site using **React 19.2.0** and the **App Router** with a hybrid JavaScript/TypeScript approach. The site showcases projects with data merged from GitHub API and custom descriptions.
 
 ### Key Architectural Patterns
 
@@ -37,9 +37,9 @@ This is a **Next.js 16** portfolio site using the **App Router** with a hybrid J
 - Config: `tsconfig.json` has `strict: false` and `allowJs: true`
 
 **GitHub Integration**:
-- Username configured in `app/lib/getProjects.js` as `GITHUB_USERNAME`
-- Uses GitHub REST API v3 with `next: { revalidate: 3600 }` caching
-- Falls back gracefully if GitHub fetch fails
+- Username configured in `app/lib/getProjects.js` as `GITHUB_USERNAME` (currently 'footnote42')
+- Uses GitHub REST API v3 with `next: { revalidate: 3600 }` caching (1-hour revalidation)
+- Falls back gracefully if GitHub fetch fails (logs warning, uses custom data only)
 
 **Project Status System**:
 - Status values: `Unleashed`, `Active`, `Conceptual`, `Foundation`
@@ -62,7 +62,7 @@ This is a **Next.js 16** portfolio site using the **App Router** with a hybrid J
 - Theme tokens defined in `app/globals.css` using `@theme inline`
 - Dark mode: System preference via `@media (prefers-color-scheme: dark)`
 - Custom CSS properties for background/foreground colors
-- Fonts: Geist Sans and Geist Mono loaded via `next/font/google`
+- Fonts: Geist Sans and Geist Mono loaded via `next/font/google` in `app/layout.js`
 
 ## Project Images
 
@@ -74,7 +74,7 @@ Images referenced in `customProjects` should be placed in `public/images/project
 
 This project uses the **React Compiler** (experimental optimization):
 - Enabled via `reactCompiler: true` in `next.config.mjs`
-- Babel plugin configured in `package.json`
+- `babel-plugin-react-compiler` included as dev dependency
 
 ## Important Gotchas
 
