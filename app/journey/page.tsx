@@ -58,18 +58,6 @@ const milestones: Milestone[] = [
   },
   {
     id: 'm4',
-    date: '10 Oct 2025',
-    title: 'Committed: Claude Pro',
-    preview: 'Paid subscription - betting on methodology',
-    details: [
-      'Hit free tier limits',
-      'Momentum was building',
-      'This is viable, not just experiment',
-    ],
-    phase: 2,
-  },
-  {
-    id: 'm5',
     date: '9 Oct 2025',
     title: 'Squad Rotation Tool',
     preview: 'First real tool for actual users',
@@ -77,6 +65,18 @@ const milestones: Milestone[] = [
       'Built in Lovable',
       'Deployed and tested with real squad',
       'Solving actual problem',
+    ],
+    phase: 2,
+  },
+  {
+    id: 'm5',
+    date: '10 Oct 2025',
+    title: 'Committed: Claude Pro',
+    preview: 'Paid subscription - betting on methodology',
+    details: [
+      'Hit free tier limits',
+      'Momentum was building',
+      'This is viable, not just experiment',
     ],
     phase: 2,
   },
