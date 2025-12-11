@@ -20,6 +20,7 @@ A modern, interactive portfolio website built with Next.js 16, React 19, and Tai
 - **Languages**: TypeScript + JavaScript (hybrid approach)
 - **Fonts**: Geist Sans and Geist Mono
 - **API**: GitHub REST API v3
+- **Analytics**: Vercel Analytics 1.6.1
 
 ## Getting Started
 

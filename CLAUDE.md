@@ -33,6 +33,7 @@ npm run lint
 - **Navigation Components**: Enhanced site navigation with improved accessibility
 - **Accessibility**: Screen reader improvements for timeline milestones and interactive elements
 - **GitHub Integration**: Stable integration with live repository data and 1-hour ISR caching
+- **Vercel Analytics**: Added `@vercel/analytics` (v1.6.1) for visitor tracking and performance monitoring in production
 
 ## Architecture Overview
 
@@ -91,6 +92,14 @@ Images referenced in `customProjects` should be placed in `public/images/project
 This project uses the **React Compiler** (experimental optimization):
 - Enabled via `reactCompiler: true` in `next.config.mjs`
 - `babel-plugin-react-compiler` included as dev dependency
+
+## Monitoring & Analytics
+
+**Vercel Analytics** is integrated for production monitoring:
+- Package: `@vercel/analytics` v1.6.1
+- Component: `<Analytics />` in root layout (`app/layout.js`)
+- Tracks page views, visitor data, and Web Vitals automatically
+- Only active in production deployments (no impact on local development)
 
 ## Important Gotchas
 
