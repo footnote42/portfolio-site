@@ -18,9 +18,25 @@ npm start
 npm run lint
 ```
 
+## Recent Changes
+
+### Security Updates
+- **Next.js 16.0.7** (Dec 2025): Updated from 16.0.3 to address React Server Components CVE vulnerabilities
+
+### New Features
+- **Journey Page** (`/journey`): Interactive career timeline with expandable milestone sections using client-side state management
+- **Code Review Page**: Added comprehensive code review documentation and examples
+- **About Page** (`/about`): Complete biography and approach section
+- **Contact Page** (`/contact`): Contact information and communication preferences
+
+### Improvements
+- **Navigation Components**: Enhanced site navigation with improved accessibility
+- **Accessibility**: Screen reader improvements for timeline milestones and interactive elements
+- **GitHub Integration**: Stable integration with live repository data and 1-hour ISR caching
+
 ## Architecture Overview
 
-This is a **Next.js 16.0.3** portfolio site using **React 19.2.0** and the **App Router** with a hybrid JavaScript/TypeScript approach. The site showcases projects with data merged from GitHub API and custom descriptions.
+This is a **Next.js 16.0.7** portfolio site using **React 19.2.0** and the **App Router** with a hybrid JavaScript/TypeScript approach. The site showcases projects with data merged from GitHub API and custom descriptions.
 
 ### Key Architectural Patterns
 

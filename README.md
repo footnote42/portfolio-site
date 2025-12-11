@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Site
+
+A modern, interactive portfolio website built with Next.js 16, React 19, and Tailwind CSS 4. Features dynamic project showcases with live GitHub integration, an interactive career timeline, and a hybrid JavaScript/TypeScript architecture.
+
+## Features
+
+- **Dynamic Project Showcase**: Combines live GitHub repository data (stars, topics, URLs) with custom editorial content
+- **Interactive Timeline**: Visual journey through career milestones with expandable sections
+- **GitHub Integration**: Automatically fetches and displays repository information with 1-hour cache revalidation
+- **Project Status System**: Color-coded badges (`Unleashed`, `Active`, `Conceptual`, `Foundation`) with animations
+- **Responsive Design**: Mobile-first approach with dark mode support via system preferences
+- **React Compiler**: Experimental optimizations enabled for better performance
+- **Hybrid TypeScript/JavaScript**: Type safety where needed, flexibility elsewhere
+
+## Tech Stack
+
+- **Framework**: Next.js 16.0.7 (App Router)
+- **UI Library**: React 19.2.0
+- **Styling**: Tailwind CSS 4.x via PostCSS
+- **Languages**: TypeScript + JavaScript (hybrid approach)
+- **Fonts**: Geist Sans and Geist Mono
+- **API**: GitHub REST API v3
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm, yarn, pnpm, or bun
+
+### Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+
+# Run linter
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── data/
+│   └── customProjects.js    # Custom project metadata and descriptions
+├── lib/
+│   └── getProjects.js        # GitHub API integration and data merging
+├── (routes)/
+│   ├── page.tsx              # Home page with featured projects
+│   ├── projects/             # Detailed project descriptions
+│   ├── journey/              # Interactive career timeline
+│   ├── about/                # Biography and approach
+│   └── contact/              # Contact information
+├── components/
+│   ├── Navigation.tsx        # Site navigation (TypeScript)
+│   └── ProjectCard.js        # Project display component (JavaScript)
+└── globals.css               # Tailwind theme tokens and custom CSS
+```
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+- **GitHub Username**: Configured in `app/lib/getProjects.js` as `GITHUB_USERNAME`
+- **Project Images**: Place in `public/images/projects/`
+- **Custom Projects**: Edit `app/data/customProjects.js` to add/modify projects
+- **TypeScript**: `strict: false` and `allowJs: true` for hybrid approach
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Add entry to `app/data/customProjects.js` with GitHub repo name as key
+2. Include tagline, description, image path, and status
+3. Add project image to `public/images/projects/`
+4. GitHub data (stars, topics, URLs) fetches automatically at build time
 
-## Deploy on Vercel
+## AI-Assisted Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project includes `CLAUDE.md` with comprehensive architectural documentation for AI-assisted development with Claude Code. See that file for detailed patterns, gotchas, and development guidelines.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Built for deployment on Vercel. The site uses static generation with ISR (Incremental Static Regeneration) for GitHub data.
+
+## License
+
+Private project
