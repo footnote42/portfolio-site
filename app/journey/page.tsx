@@ -10,13 +10,21 @@ interface Milestone {
   title: string;
   preview: string;
   details: string[];
-  phase: 1 | 2 | 3;
+  phase: 1 | 2 | 3 | 4;
 }
 
-const phases = [
+interface Phase {
+  id: 1 | 2 | 3 | 4;
+  title: string;
+  period: string;
+  quote?: string;
+}
+
+const phases: Phase[] = [
   { id: 1, title: 'Can This Actually Work?', period: 'Aug - Sep 2025' },
   { id: 2, title: 'Building Real Tools', period: 'October 2025' },
   { id: 3, title: 'Shipping with Confidence', period: 'November 2025' },
+  { id: 4, title: 'Experimenting with Ideas', period: 'December 2025', quote: 'Not every project needs to solve a problem today. Sometimes you build to understand what\'s possible.' },
 ];
 
 const milestones: Milestone[] = [
@@ -104,6 +112,19 @@ const milestones: Milestone[] = [
     ],
     phase: 3,
   },
+  {
+    id: 'm8',
+    date: '12 Dec 2025',
+    title: 'Session Comparison Tool',
+    preview: 'Exploring AI-driven session plan validation through comparative analysis',
+    details: [
+      'Colleague\'s work with local LLMs debating topics inspired an experiment',
+      'Can AI generate alternative coaching sessions and judge them systematically?',
+      'Not solving an immediate problem—learning what\'s possible',
+      'Technical learning: Small language model deployment concepts, comparative AI outputs',
+    ],
+    phase: 4,
+  },
 ];
 
 export default function JourneyPage() {
@@ -149,6 +170,11 @@ export default function JourneyPage() {
                     {phase.title}
                   </h2>
                   <p className="text-slate-400">{phase.period}</p>
+                  {phase.quote && (
+                    <p className="text-sm text-slate-500 mt-2 italic">
+                      {phase.quote}
+                    </p>
+                  )}
                 </div>
               </div>
 
