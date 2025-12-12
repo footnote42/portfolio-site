@@ -40,7 +40,7 @@ export default function AboutPage() {
           </p>
 
           <p>
-            Current projects focus on tools for volunteer rugby coaches — session planners, player rotation 
+            Current projects focus on tools for volunteer rugby coaches - session planners, player rotation 
             managers, reflection frameworks. Real problems, real users.
           </p>
         </div>
