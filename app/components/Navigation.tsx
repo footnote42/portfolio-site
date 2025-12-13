@@ -12,26 +12,32 @@ export default function Navigation() {
           </a>
           
           <div className="flex gap-6 text-sm">
-            <a 
-              href="/#projects" 
+            <a
+              href="/#projects"
               className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
             >
               Projects
             </a>
-            <a 
-              href="/journey" 
+            <a
+              href="/blog"
+              className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
+            >
+              Blog
+            </a>
+            <a
+              href="/journey"
               className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
             >
               Journey
             </a>
-            <a 
-              href="/about" 
+            <a
+              href="/about"
               className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
             >
               About
             </a>
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
             >
               Contact

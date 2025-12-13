@@ -4,6 +4,14 @@ import matter from 'gray-matter';
 
 const BLOG_DIR = path.join(process.cwd(), 'content', 'blog');
 
+// Calculate reading time (assumes ~200 words per minute)
+function calculateReadingTime(text) {
+  const wordsPerMinute = 200;
+  const wordCount = text.trim().split(/\s+/).length;
+  const minutes = Math.ceil(wordCount / wordsPerMinute);
+  return minutes;
+}
+
 export async function getBlogPosts() {
   try {
     // Read all files from the blog directory
@@ -30,6 +38,7 @@ export async function getBlogPosts() {
           excerpt: data.excerpt || '',
           featured: data.featured || false,
           content,
+          readingTime: calculateReadingTime(content),
         };
       })
     );

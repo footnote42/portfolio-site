@@ -35,7 +35,7 @@ export default async function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="block group"
               >
-                <article className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6 transition-all hover:border-slate-400 dark:hover:border-slate-500 hover:shadow-md">
+                <article className="bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 p-6 transition-all duration-200 hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-lg hover:-translate-y-1">
                   {/* Featured Badge */}
                   {post.featured && (
                     <div className="mb-3">
@@ -45,14 +45,18 @@ export default async function BlogPage() {
                     </div>
                   )}
 
-                  {/* Date */}
-                  <time className="text-sm text-slate-500 dark:text-slate-400 font-mono">
-                    {new Date(post.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </time>
+                  {/* Date and Reading Time */}
+                  <div className="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+                    <time className="font-mono">
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      })}
+                    </time>
+                    <span className="text-slate-400 dark:text-slate-600">•</span>
+                    <span>{post.readingTime} min read</span>
+                  </div>
 
                   {/* Title */}
                   <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-100 mt-2 mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
