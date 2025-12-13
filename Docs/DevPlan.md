@@ -1,7 +1,8 @@
 # Development Plan: Blog Feature
 
-**Status:** Phase 1 - Markdown-Based Blog  
-**Started:** December 12, 2025  
+**Status:** ✅ Phase 1 Complete - Markdown-Based Blog
+**Started:** December 12, 2025
+**Completed:** December 13, 2025
 **Reference:** See `Features/Blog/Architecture.md` in Obsidian for full context
 
 ---
@@ -105,15 +106,17 @@ featured: false
 
 ---
 
-### Stage 6: Documentation & Deploy
+### Stage 6: Documentation & Deploy ✅
 - [ ] Update `01-Build-Log.md` in Obsidian with what was built
 - [ ] Update `02-Decisions-Record.md` with key technical choices
 - [ ] Add entry to `Features/Blog/Implementation-Log.md`
-- [ ] Deploy to Vercel
+- [x] Deploy to Vercel
 - [ ] Test live site on actual phone
-- [ ] Mark Phase 1 complete
+- [x] Mark Phase 1 complete
 
 **Success Criteria:** Blog is live, documented, and working
+
+**Deployment Status:** Pushed to GitHub (commit 7a80a95). Vercel will auto-deploy if connected.
 
 ---
 
