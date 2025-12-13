@@ -1,7 +1,7 @@
 ---
 title: "The Vibe Coding Shift"
 date: "2025-11-25"
-excerpt: "Four months ago, coding felt like a locked door. Now I'm shipping real tools. What changed wasn't the technology—it was realizing I'd been asking the wrong question."
+excerpt: "Four months ago, coding felt like a locked door. Now I'm shipping real tools. What changed wasn't the technology - it was realizing I'd been asking the wrong question."
 slug: "the-vibe-coding-shift"
 featured: true
 ---
@@ -10,7 +10,7 @@ Four months ago, I read a GitHub blog post about building Pong with Copilot. The
 
 I thought: Could I actually do this?
 
-The honest answer was—I had no idea. I'd tried learning to code before. Tutorials felt like climbing a wall with no handholds. I'd get stuck on syntax, lose momentum, and give up. Every time, I walked away thinking: "This isn't for me."
+The honest answer was - I had no idea. I'd tried learning to code before. Tutorials felt like climbing a wall with no handholds. I'd get stuck on syntax, lose momentum, and give up. Every time, I walked away thinking: "This isn't for me."
 
 But this time felt different. Not because the technology was better (though it was). Because the question changed.
 
@@ -89,7 +89,7 @@ Fair point. But here's my counter:
 Traditional learning says: Learn foundations first, build later.
 Vibe coding says: Build first, understand foundations as you need them.
 
-I'm learning—just in reverse order. And the stuff I learn sticks, because I needed it to solve a real problem.
+I'm learning - just in reverse order. And the stuff I learn sticks, because I needed it to solve a real problem.
 
 ## Where This Goes Next
 
@@ -99,6 +99,6 @@ But right now? I'm shipping tools that work. I'm learning faster than I ever did
 
 That's enough for now.
 
-If you've been on the fence about trying this—just start. Pick a real problem. Describe it clearly. See what happens.
+If you've been on the fence about trying this - just start. Pick a real problem. Describe it clearly. See what happens.
 
 You might surprise yourself.

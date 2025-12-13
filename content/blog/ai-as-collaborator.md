@@ -8,7 +8,7 @@ featured: false
 
 Here's a thing I've learned: AI is confident even when it's wrong.
 
-Last week, I asked Claude to help optimize a component. It suggested a pattern that sounded great—clean, elegant, performant.
+Last week, I asked Claude to help optimize a component. It suggested a pattern that sounded great - clean, elegant, performant.
 
 I implemented it. Immediately broke the build.
 

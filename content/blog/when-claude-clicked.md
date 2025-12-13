@@ -6,7 +6,7 @@ slug: "when-claude-clicked"
 featured: false
 ---
 
-I started with GitHub Copilot. It was brilliant for getting started—autocomplete on steroids, quick iterations, immediate feedback.
+I started with GitHub Copilot. It was brilliant for getting started - autocomplete on steroids, quick iterations, immediate feedback.
 
 But around week three, I hit a pattern: I'd describe what I wanted, Copilot would generate code, and I'd... not really understand why it worked.
 
@@ -22,7 +22,7 @@ The difference showed up immediately. I asked Claude to help with a feature, and
 - What the trade-offs were
 - What I should watch out for later
 
-It wasn't just solving the problem—it was teaching me how to think about the problem.
+It wasn't just solving the problem - it was teaching me how to think about the problem.
 
 ## Tighter Loop
 
