@@ -2,6 +2,19 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Documentation
+
+**Core Philosophy & Planning:**
+- **`Docs/project_philosophy.md`** - Design principles, voice, and technical philosophy. Read this to understand the "why" behind decisions.
+- **`Docs/feature_template.md`** - Template for planning new features. Use this when adding significant functionality.
+- **`Docs/DevPlan.md`** - Active development plans and feature implementation roadmaps. Check here for current work and future phases.
+
+**When to consult these:**
+- Before implementing major features → Review `project_philosophy.md` for alignment
+- Planning a new feature → Use `feature_template.md` structure
+- Understanding current priorities → Check `DevPlan.md` for active plans
+- Making design decisions → Reference the philosophy for mobile-first, substance-over-flash principles
+
 ## Development Commands
 
 ```bash
