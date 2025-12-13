@@ -59,13 +59,13 @@ featured: false
 **Note:** Excerpt serves dual purpose - displays on blog index AND populates meta description for social sharing. Make it delightful.
 ---
 
-### Stage 2: Blog Index Page
-- [ ] Create `/app/blog/page.tsx` route
-- [ ] Display list of all blog posts
-- [ ] Show: title, date, excerpt
-- [ ] Mobile-optimized card layout
-- [ ] Link to individual post pages
-- [ ] Empty state if no posts exist
+### Stage 2: Blog Index Page ✅
+- [x] Create `/app/blog/page.tsx` route
+- [x] Display list of all blog posts
+- [x] Show: title, date, excerpt
+- [x] Mobile-optimized card layout
+- [x] Link to individual post pages
+- [x] Empty state if no posts exist
 
 **Success Criteria:** Blog index page renders on mobile and desktop, shows all posts
 
