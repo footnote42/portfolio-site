@@ -28,8 +28,19 @@ export const customProjects = {
     tagline: "Guided reflection tool for coaches and practitioners",
     image: "/images/projects/reflection-coach.png",
     status: "Conceptual",
-    featured: true,
+    featured: false,
     hoverReveal: "Expanding from coaching reflections to broader Stoic philosophical practice",
     problem: "Structured reflection improves coaching effectiveness, but requires prompting and framework",
+  },
+
+  "rugby-council-ai": {
+    displayName: "Rugby Council AI",
+    tagline: "Multi-model AI collaboration for rugby session planning",
+    image: "/images/projects/rugby-council-ai.png",
+    status: "Unleashed",
+    featured: true,
+    hoverReveal: "Three models independently plan, review each other's work, then a chairman synthesizes the best elements",
+    problem: "Single AI models have blind spots. Each has different strengths in creativity, structure, and analytical thinking. Rugby coaching needs all three.",
+    obstacles: "Learning new skills and techniques. Reducing API costs with locally hosted models. Understanding hardware limitations.",
   }
 };
