@@ -176,7 +176,7 @@ export default function JourneyPage() {
             <div key={phase.id} className="mb-12">
               {/* Phase Header */}
               <div className="flex items-center gap-4 mb-8">
-                <div className="relative w-16 h-16 rounded-full bg-slate-900 border-2 border-emerald-500 flex items-center justify-center font-bold text-emerald-400 z-10">
+                <div className="relative w-16 h-16 flex-shrink-0 rounded-full bg-slate-900 border-2 border-emerald-500 flex items-center justify-center font-bold text-emerald-400 z-10">
                   {phase.id}
                 </div>
                 <div>

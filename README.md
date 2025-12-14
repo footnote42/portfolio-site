@@ -2,6 +2,8 @@
 
 A modern, interactive portfolio website built with Next.js 16, React 19, and Tailwind CSS 4. Features dynamic project showcases with live GitHub integration, an interactive career timeline, and a hybrid JavaScript/TypeScript architecture.
 
+**Latest**: Added Rugby Council AI project (Dec 14, 2025) - multi-model collaboration system for rugby session planning featuring three specialized AI models with systematic delegation and chairman synthesis.
+
 ## Features
 
 - **Dynamic Project Showcase**: Combines live GitHub repository data (stars, topics, URLs) with custom editorial content

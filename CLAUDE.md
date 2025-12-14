@@ -33,6 +33,11 @@ npm run lint
 
 ## Recent Changes
 
+### Latest Updates (Dec 14, 2025)
+- **Rugby Council AI Project**: Added multi-model collaboration project to portfolio featuring three AI models that independently plan, review, and synthesize rugby training sessions
+- **Journey Milestone**: Added Dec 14 entry documenting Rugby Council AI deployment and evolution from comparative analysis concepts
+- **Featured Projects**: Unfeatured Reflective Practice Coach to maintain three featured projects (Squad Rotation Tool, Rugby Session Planner, Rugby Council AI)
+
 ### Security Updates
 - **Next.js 16.0.7** (Dec 2025): Updated from 16.0.3 to address React Server Components CVE vulnerabilities
 
