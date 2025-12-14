@@ -125,6 +125,20 @@ const milestones: Milestone[] = [
     ],
     phase: 4,
   },
+  {
+    id: 'm9',
+    date: '14 Dec 2025',
+    title: 'Rugby Council AI Deployed',
+    preview: 'Three-model collaboration system - from concept to working implementation',
+    details: [
+      'Built on the comparative analysis ideas from Dec 12 - but evolved into systematic delegation',
+      'Three specialized models (analytical, structured, creative) independently plan sessions',
+      'Models anonymously review each other\'s work, then a chairman synthesizes best elements',
+      'First project using local LM Studio deployment - learning hardware limitations and API cost reduction',
+      'Added to portfolio as "Unleashed" - functional tool, not just experiment',
+    ],
+    phase: 4,
+  },
 ];
 
 export default function JourneyPage() {
