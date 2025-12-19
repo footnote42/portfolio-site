@@ -42,5 +42,15 @@ export const customProjects = {
     hoverReveal: "Three models independently plan, review each other's work, then a chairman synthesizes the best elements",
     problem: "Single AI models have blind spots. Each has different strengths in creativity, structure, and analytical thinking. Rugby coaching needs all three.",
     obstacles: "Learning new skills and techniques. Reducing API costs with locally hosted models. Understanding hardware limitations.",
+  },
+
+  "Battlepoos": {
+    displayName: "Battlepoos",
+    tagline: "Real-time multiplayer battleship game with a twist",
+    image: "/images/projects/battlepoos.png",
+    status: "Active",
+    featured: false,
+    hoverReveal: "Full-stack TypeScript game with WebSocket multiplayer, built to explore real-time state synchronization",
+    problem: "Learning real-time multiplayer architecture, WebSocket communication patterns, and shared client-server state management.",
   }
 };

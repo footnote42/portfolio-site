@@ -139,6 +139,20 @@ const milestones: Milestone[] = [
     ],
     phase: 4,
   },
+  {
+    id: 'm10',
+    date: '18-19 Dec 2025',
+    title: 'Battlepoos: 24-Hour Build',
+    preview: 'Built functioning multiplayer battleship game in one day',
+    details: [
+      'First real-time multiplayer project - WebSockets, Socket.io, state synchronization',
+      'Full-stack TypeScript with shared types between client and server',
+      'Instant matchmaking, ship placement, turn-based combat, audio feedback',
+      'Learning moment: Real-time architecture is fundamentally different from REST APIs',
+      'Not solving a problem - exploring what\'s possible with multiplayer games',
+    ],
+    phase: 4,
+  },
 ];
 
 export default function JourneyPage() {
