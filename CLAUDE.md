@@ -33,8 +33,10 @@ npm run lint
 
 ## Recent Changes
 
-### Latest Updates (Dec 14, 2025)
-- **Rugby Council AI Project**: Added multi-model collaboration project to portfolio featuring three AI models that independently plan, review, and synthesize rugby training sessions
+### Latest Updates (Dec 19, 2025)
+- **Battlepoos Project**: Added multiplayer battleships game with toilet humor twist featuring WebSocket multiplayer and real-time state synchronization
+- **Blog Feature**: Complete markdown-based blog system with frontmatter support, dynamic routing, reading time estimates, and featured posts (Phase 1 complete Dec 13, 2025)
+- **Rugby Council AI Project**: Added multi-model collaboration project to portfolio featuring three AI models that independently plan, review, and synthesize rugby training sessions (Dec 14, 2025)
 - **Journey Milestone**: Added Dec 14 entry documenting Rugby Council AI deployment and evolution from comparative analysis concepts
 - **Featured Projects**: Unfeatured Reflective Practice Coach to maintain three featured projects (Squad Rotation Tool, Rugby Session Planner, Rugby Council AI)
 
@@ -42,6 +44,7 @@ npm run lint
 - **Next.js 16.0.7** (Dec 2025): Updated from 16.0.3 to address React Server Components CVE vulnerabilities
 
 ### New Features
+- **Blog System** (`/blog`): Markdown-based blog with frontmatter, dynamic routing (`/blog/[slug]`), reading time estimates, and featured post badges
 - **Journey Page** (`/journey`): Interactive career timeline with expandable milestone sections using client-side state management
 - **Code Review Page**: Added comprehensive code review documentation and examples
 - **About Page** (`/about`): Complete biography and approach section
@@ -85,11 +88,37 @@ This is a **Next.js 16.0.7** portfolio site using **React 19.2.0** and the **App
 
 - `/` - Home page with featured and all projects
 - `/projects` - Detailed project descriptions with problem/obstacles sections
+- `/blog` - Blog index listing all posts (sorted by date, newest first)
+- `/blog/[slug]` - Individual blog post pages with markdown rendering
 - `/journey` - Interactive timeline (client-side state for expand/collapse)
 - `/about` - Biography and approach
 - `/contact` - Contact information
 
 **Note**: Journey page is `'use client'` directive for interactive timeline features.
+
+### Blog System Architecture
+
+**Markdown-Based Blog** (Phase 1 - Complete):
+- Blog posts stored as markdown files in `content/blog/`
+- `app/lib/getBlogPosts.js`: Reads markdown files, parses frontmatter (using `gray-matter`), calculates reading time
+- Frontmatter structure: `title`, `date`, `excerpt`, `slug`, `featured` (boolean)
+- Posts sorted by date (newest first) automatically
+- Dynamic routing: `/blog/[slug]` for individual posts
+- Markdown rendering: Uses `react-markdown` with `remark-gfm` for GitHub Flavored Markdown
+- Reading time: Auto-calculated based on ~200 words per minute
+- Template available: `content/blog/post-template.md`
+
+**Dependencies**:
+- `gray-matter`: Frontmatter parsing
+- `react-markdown`: Markdown to React rendering
+- `remark-gfm`: GitHub Flavored Markdown support (tables, strikethrough, etc.)
+
+**Adding New Posts**:
+1. Create `.md` file in `content/blog/` with frontmatter
+2. Commit to repo
+3. Site automatically displays post on next build/revalidation
+
+**Future**: Phase 2 planned for Supabase backend + admin panel (see `Docs/DevPlan.md`)
 
 ## Styling
 
@@ -123,5 +152,7 @@ This project uses the **React Compiler** (experimental optimization):
 
 1. **Data flow**: To add a new project, add entry to `customProjects` with GitHub repo name as key
 2. **Build-time data**: GitHub data fetched during build, not client-side
-3. **Navigation anchors**: ProjectCard generates anchor IDs from project names (lowercase, hyphenated)
-4. **Mixed extensions**: Don't assume all files are TypeScript - check file extension before refactoring
+3. **Blog posts**: Must be markdown files in `content/blog/` with valid frontmatter - no database yet
+4. **Navigation anchors**: ProjectCard generates anchor IDs from project names (lowercase, hyphenated)
+5. **Mixed extensions**: Don't assume all files are TypeScript - check file extension before refactoring
+6. **Blog template**: `content/blog/post-template.md` is excluded from blog post listing automatically
