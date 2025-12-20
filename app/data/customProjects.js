@@ -3,9 +3,9 @@
 
 export const customProjects = {
   "pitch-mate-rota": {
-    displayName: "Squad Rotation Tool",
+    displayName: "Squad Rotation Tool v2.0",
     tagline: "Fair game-time allocation for age-grade rugby teams",
-    image: "/images/projects/squad-rotation-tool.png",
+    image: "/images/projects/mobile-portfolio-view.png",
     status: "Unleashed",
     featured: true,
     hoverReveal: "Built to help volunteer coaches manage complex rotation requirements",
