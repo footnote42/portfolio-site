@@ -3,6 +3,7 @@
 
 import { useState } from 'react';
 import Navigation from '../components/Navigation';
+import { BrandHeading, BrandCard } from '../components/brand';
 
 interface Milestone {
   id: string;
@@ -164,16 +165,18 @@ export default function JourneyPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+    <div className="min-h-screen bg-[var(--color-bg)]">
       <Navigation />
       <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h1 className="text-5xl font-bold mb-4">The Vibe Coding Journey</h1>
-          <p className="text-xl text-slate-400">
+          <BrandHeading level={1} className="mb-4">
+            The Vibe Coding Journey
+          </BrandHeading>
+          <p className="text-xl text-[var(--color-text)] opacity-70 font-[family-name:var(--font-inter)]">
             From "Can I do this?" to deployed portfolio in 3 months
           </p>
-          <p className="text-sm text-slate-500 mt-2 italic">
+          <p className="text-sm text-[var(--color-text)] opacity-50 mt-2 italic font-[family-name:var(--font-inter)]">
             What stands in the way becomes the way
           </p>
         </div>
@@ -181,8 +184,8 @@ export default function JourneyPage() {
         {/* Timeline */}
         <div className="relative pb-32">
           {/* Vertical line - solid (stops before future section) */}
-          <div 
-            className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-emerald-500 via-emerald-500 to-emerald-500"
+          <div
+            className="absolute left-8 top-0 w-0.5 bg-gradient-to-b from-[var(--color-accent-cyan)] via-[var(--color-accent-cyan)] to-[var(--color-accent-cyan)]"
             style={{ height: 'calc(100% - 12rem)' }}
           />
 
@@ -190,16 +193,16 @@ export default function JourneyPage() {
             <div key={phase.id} className="mb-12">
               {/* Phase Header */}
               <div className="flex items-center gap-4 mb-8">
-                <div className="relative w-16 h-16 flex-shrink-0 rounded-full bg-slate-900 border-2 border-emerald-500 flex items-center justify-center font-bold text-emerald-400 z-10">
+                <div className="relative w-16 h-16 flex-shrink-0 rounded-full bg-[var(--color-bg)] border-2 border-[var(--color-accent-cyan)] flex items-center justify-center font-[family-name:var(--font-jetbrains-mono)] font-bold text-[var(--color-accent-cyan)] z-10">
                   {phase.id}
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-100">
+                  <BrandHeading level={2}>
                     {phase.title}
-                  </h2>
-                  <p className="text-slate-400">{phase.period}</p>
+                  </BrandHeading>
+                  <p className="text-[var(--color-text)] opacity-70 font-[family-name:var(--font-inter)]">{phase.period}</p>
                   {phase.quote && (
-                    <p className="text-sm text-slate-500 mt-2 italic">
+                    <p className="text-sm text-[var(--color-text)] opacity-50 mt-2 italic font-[family-name:var(--font-inter)]">
                       {phase.quote}
                     </p>
                   )}
@@ -221,47 +224,47 @@ export default function JourneyPage() {
                       {/* Hover splash effect */}
                       {hoveredId === milestone.id && (
                         <div className="absolute inset-0 -m-2">
-                          <div className="w-8 h-8 rotate-45 bg-emerald-500/20 animate-ping" />
+                          <div className="w-8 h-8 rotate-45 bg-[var(--color-accent-cyan)]/20 animate-ping" />
                         </div>
                       )}
-                      
+
                       {/* Diamond shape */}
-                      <div className="relative w-4 h-4 rotate-45 bg-emerald-500 border-2 border-slate-900 transition-all group-hover:scale-125 group-hover:bg-emerald-400" />
+                      <div className="relative w-4 h-4 rotate-45 bg-[var(--color-accent-cyan)] border-2 border-[var(--color-bg)] transition-all group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(0,217,255,0.4)]" />
                     </div>
 
                     {/* Milestone card */}
                     <div
                       onClick={() => toggleExpand(milestone.id)}
-                      className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 cursor-pointer hover:border-emerald-500/50 transition-all"
+                      className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg p-4 cursor-pointer hover:border-[var(--color-accent-cyan)]/50 hover:shadow-[0_0_20px_rgba(0,217,255,0.08)] transition-all"
                     >
                       {/* Date and title */}
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <p className="text-xs text-emerald-400 font-mono mb-1">
+                          <p className="text-xs text-[var(--color-accent-cyan)] font-[family-name:var(--font-jetbrains-mono)] mb-1">
                             {milestone.date}
                           </p>
-                          <h3 className="text-lg font-semibold">
+                          <h3 className="text-lg font-semibold text-[var(--color-text)] font-[family-name:var(--font-jetbrains-mono)]">
                             {milestone.title}
                           </h3>
                         </div>
-                        <span className="text-slate-500">
+                        <span className="text-[var(--color-text)] opacity-50 font-[family-name:var(--font-jetbrains-mono)]">
                           {expandedId === milestone.id ? '−' : '+'}
                         </span>
                       </div>
 
                       {/* Preview (always visible) */}
-                      <p className="text-sm text-slate-400">{milestone.preview}</p>
+                      <p className="text-sm text-[var(--color-text)] opacity-70 font-[family-name:var(--font-inter)]">{milestone.preview}</p>
 
                       {/* Expanded details */}
                       {expandedId === milestone.id && (
-                        <div className="mt-4 pt-4 border-t border-slate-700">
+                        <div className="mt-4 pt-4 border-t border-[var(--color-border)]">
                           <ul className="space-y-2">
                             {milestone.details.map((detail, idx) => (
                               <li
                                 key={idx}
-                                className="text-sm text-slate-300 flex items-start gap-2"
+                                className="text-sm text-[var(--color-text)] opacity-90 flex items-start gap-2 font-[family-name:var(--font-inter)]"
                               >
-                                <span className="text-emerald-500 mt-1">→</span>
+                                <span className="text-[var(--color-accent-cyan)] mt-1">→</span>
                                 <span>{detail}</span>
                               </li>
                             ))}
@@ -276,9 +279,9 @@ export default function JourneyPage() {
 
           {/* Future section - dashed line only */}
           <div className="ml-16 relative">
-            <div className="absolute left-8 -ml-16 top-0 h-24 w-0.5 border-l-2 border-dashed border-emerald-500/30" />
-            <div className="bg-slate-800/30 border border-dashed border-slate-700 rounded-lg p-6 text-center">
-              <p className="text-slate-400">The journey continues...</p>
+            <div className="absolute left-8 -ml-16 top-0 h-24 w-0.5 border-l-2 border-dashed border-[var(--color-accent-cyan)]/30" />
+            <div className="bg-[var(--color-surface)]/30 border border-dashed border-[var(--color-border)] rounded-lg p-6 text-center">
+              <p className="text-[var(--color-text)] opacity-70 font-[family-name:var(--font-inter)]">The journey continues...</p>
             </div>
           </div>
         </div>
