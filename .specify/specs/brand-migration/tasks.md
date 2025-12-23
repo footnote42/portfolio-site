@@ -76,23 +76,23 @@
 - [x] 54. Commit: "brand: migrate /journey page"
 - [x] 55. Remove backup file
 
-## Phase 6: Page Migration - Blog Index
+## Phase 6: Page Migration - Blog Index ✅ (COMPLETE)
 
-- [ ] 56. Capture "before" screenshot of /blog page
-- [ ] 57. Create backup: `cp app/blog/page.tsx app/blog/page.tsx.backup`
-- [ ] 58. Import brand components in /blog
-- [ ] 59. Replace root container with brand background
-- [ ] 60. Replace h1 with `<BrandHeading level={1}>`
-- [ ] 61. Replace blog post cards with `<BrandCard>`
-- [ ] 62. Add `<BrandTag>Featured</BrandTag>` for featured posts
-- [ ] 63. Style reading time and date with brand typography
-- [ ] 64. Replace "Read more" links with `<BrandLink>`
-- [ ] 65. Test card hover effects
-- [ ] 66. Test /blog grid on mobile
-- [ ] 67. Run `npm run build` - verify success
-- [ ] 68. Capture "after" screenshot of /blog
-- [ ] 69. Commit: "brand: migrate /blog index page"
-- [ ] 70. Remove backup file
+- [x] 56. Capture "before" screenshot of /blog page
+- [x] 57. Create backup: `cp app/blog/page.tsx app/blog/page.tsx.backup`
+- [x] 58. Import brand components in /blog
+- [x] 59. Replace root container with brand background
+- [x] 60. Replace h1 with `<BrandHeading level={1}>`
+- [x] 61. Replace blog post cards with `<BrandCard>`
+- [x] 62. Add `<BrandTag>Featured</BrandTag>` for featured posts
+- [x] 63. Style reading time and date with brand typography
+- [x] 64. Replace "Read more" links with `<BrandLink>`
+- [x] 65. Test card hover effects
+- [x] 66. Test /blog grid on mobile
+- [x] 67. Run `npm run build` - verify success
+- [x] 68. Capture "after" screenshot of /blog
+- [x] 69. Commit: "brand: migrate /blog index page"
+- [x] 70. Remove backup file
 
 ## Phase 7: Page Migration - Blog Post
 
@@ -212,8 +212,8 @@
 ## Task Summary
 
 **Total Tasks:** 162
-**Completed:** 55 (Phases 1-5)
-**Remaining:** 107
+**Completed:** 70 (Phases 1-6)
+**Remaining:** 92
 
 **Breakdown by Phase:**
 - ✅ Phase 1: Preparation (5 tasks)
@@ -221,7 +221,7 @@
 - ✅ Phase 3: About Page (12 tasks)
 - ✅ Phase 4: Contact Page (14 tasks)
 - ✅ Phase 5: Journey Page (14 tasks)
-- ⏳ Phase 6: Blog Index (15 tasks)
+- ✅ Phase 6: Blog Index (15 tasks)
 - ⏳ Phase 7: Blog Post (14 tasks)
 - ⏳ Phase 8: Projects Page (17 tasks)
 - ⏳ Phase 9: Homepage (21 tasks)
