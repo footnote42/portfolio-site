@@ -148,6 +148,49 @@ This project uses the **React Compiler** (experimental optimization):
 - Tracks page views, visitor data, and Web Vitals automatically
 - Only active in production deployments (no impact on local development)
 
+## Spec-Driven Development (Spec-Kit)
+
+This project uses **GitHub Spec Kit** methodology for structured feature development:
+
+**Constitution:** `.specify/memory/constitution.md` - Project governing principles derived from `Docs/project_philosophy.md`
+
+**Workflow Commands:** Available via `/speckit.*` skills in Claude Code
+- `/speckit.specify [feature-name]` - Create functional specification
+- `/speckit.plan [feature-name]` - Design technical implementation
+- `/speckit.tasks [feature-name]` - Generate task breakdown
+- `/speckit.implement [feature-name]` - Execute implementation
+- `/speckit.clarify` - Ask clarifying questions
+- `/speckit.analyze` - Check consistency
+
+**Directory Structure:**
+```
+.specify/
+├── memory/
+│   └── constitution.md          # Project principles (source of truth)
+└── specs/
+    └── [feature-name]/
+        ├── spec.md              # Functional requirements
+        ├── plan.md              # Technical design
+        ├── tasks.md             # Actionable breakdown
+        └── implementation-log.md # Execution notes
+```
+
+**Using Spec-Kit:**
+1. Create spec: `/speckit.specify new-feature-name "description"`
+2. Review and refine the generated specification
+3. Plan implementation: `/speckit.plan new-feature-name`
+4. Generate tasks: `/speckit.tasks new-feature-name`
+5. Execute: `/speckit.implement new-feature-name`
+
+**Integration with Existing Workflow:**
+- Spec-Kit provides structure for complex features
+- TodoWrite continues to track execution progress
+- `Docs/DevPlan.md` documents high-level project roadmap
+- Constitution ensures mobile-first, substance-over-flash principles
+
+**CLI Tool:** `specify` command installed via `uv` (Python 3.11+)
+- Note: CLI has Windows console encoding issues - use skills instead
+
 ## Important Gotchas
 
 1. **Data flow**: To add a new project, add entry to `customProjects` with GitHub repo name as key

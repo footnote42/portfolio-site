@@ -7,7 +7,12 @@
       "Bash(git add:*)",
       "Bash(cat:*)",
       "Bash(git commit:*)",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(uv tool install:*)",
+      "Bash(PYTHONIOENCODING=utf-8 specify init:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
