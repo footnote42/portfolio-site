@@ -3,6 +3,7 @@
 A modern, interactive portfolio website built with Next.js 16, React 19, and Tailwind CSS 4. Features a distinctive workshop aesthetic with electric cyan and amber accents, dynamic project showcases with live GitHub integration, an interactive career timeline, and a hybrid JavaScript/TypeScript architecture.
 
 **Latest**:
+Added Pong Redux (24 Dec 2025) - 2nd attempt at a Pong clone demonstrating progress.
 Added Battlepoos (19 Dec 2025) - Battleships clone with a toilet humour twist.
 Added Rugby Council AI project (14 Dec 2025) - multi-model collaboration system for rugby session planning featuring three specialized AI models with systematic delegation and chairman synthesis.
 Added Blog feature (13 Dec 2025) - markdown-based blog system with dynamic routing and reading time estimates.
