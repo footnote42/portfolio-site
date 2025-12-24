@@ -122,11 +122,142 @@ This is a **Next.js 16.0.7** portfolio site using **React 19.2.0** and the **App
 
 ## Styling
 
+**Brand System** - Workshop Aesthetic:
 - **Tailwind CSS 4.x** via `@tailwindcss/postcss` (no config file)
-- Theme tokens defined in `app/globals.css` using `@theme inline`
-- Dark mode: System preference via `@media (prefers-color-scheme: dark)`
-- Custom CSS properties for background/foreground colors
-- Fonts: Geist Sans and Geist Mono loaded via `next/font/google` in `app/layout.js`
+- Brand CSS variables defined in `app/globals.css`
+- Fixed color scheme (no dark mode toggle) - workshop aesthetic with deep slate background
+- **Typography**:
+  - Headings: JetBrains Mono (monospace, technical feel)
+  - Body: Inter (clean, readable sans-serif)
+  - Fonts loaded via `next/font/google` in `app/layout.js`
+- **Color Palette**:
+  - Background: Deep Slate (#0f1419)
+  - Surface: Charcoal (#1c2128)
+  - Text: Warm White (#e6edf3)
+  - Accent Cyan: Electric Cyan (#00d9ff) - primary CTAs
+  - Accent Amber: Amber Glow (#f59e0b) - hover states, highlights
+  - Accent Purple: Muted Purple (#8b5cf6) - code blocks
+
+## Brand Component System
+
+**Location**: `app/components/brand/`
+
+The site uses a custom brand component library for consistent styling. **Always use these components** instead of raw HTML elements when building UI.
+
+### Available Components
+
+**BrandCard** - Container with brand styling
+```jsx
+import { BrandCard } from './components/brand';
+
+<BrandCard hover={true} className="mb-8">
+  {/* Content */}
+</BrandCard>
+```
+- Props: `children`, `hover` (boolean), `className` (optional)
+- Provides: Charcoal background, subtle borders, optional hover lift effect
+
+**BrandHeading** - Semantic headings with brand typography
+```jsx
+import { BrandHeading } from './components/brand';
+
+<BrandHeading level={1} className="mb-6">
+  Page Title
+</BrandHeading>
+```
+- Props: `level` (1-6), `children`, `className` (optional)
+- Font: JetBrains Mono
+- Color: Warm white with subtle amber glow on h1
+
+**BrandLink** - Internal and external links
+```jsx
+import { BrandLink } from './components/brand';
+
+// Internal link
+<BrandLink href="/about">About</BrandLink>
+
+// External link (opens in new tab)
+<BrandLink href="https://github.com" external>
+  GitHub
+</BrandLink>
+```
+- Props: `href`, `children`, `external` (boolean), `className` (optional)
+- Automatically handles external link behavior (target="_blank", rel attributes)
+- Hover: Amber color transition
+
+**BrandButton** - Interactive buttons
+```jsx
+import { BrandButton } from './components/brand';
+
+<BrandButton variant="primary" onClick={handleClick}>
+  Submit
+</BrandButton>
+```
+- Props: `variant` ("primary" | "secondary"), `onClick`, `children`, `className` (optional)
+- Primary: Electric cyan background with glow effect
+- Secondary: Transparent with border, hover effect
+- **Note**: For navigation, use `BrandLink` instead
+
+**BrandTag** - Labels and badges
+```jsx
+import { BrandTag } from './components/brand';
+
+<BrandTag>react</BrandTag>
+```
+- Props: `children`, `className` (optional)
+- Styling: Purple accent with subtle background
+- Common use: Technology tags, status labels
+
+### Usage Guidelines
+
+1. **Import**: Always import from `./components/brand` or `../components/brand`
+2. **Navigation**: Use `BrandLink` for all links (internal and external)
+3. **Headings**: Use `BrandHeading` instead of `<h1>`, `<h2>`, etc.
+4. **Cards**: Wrap content sections in `BrandCard` for consistent containers
+5. **Typography**: For body text, use `font-['Inter',sans-serif]` class
+6. **Colors**: Reference brand CSS variables:
+   - `var(--color-bg)` - Background
+   - `var(--color-text)` - Text
+   - `var(--color-accent-cyan)` - Primary accent
+   - `var(--color-accent-amber)` - Secondary accent
+   - `var(--color-border)` - Borders
+
+### Example: Complete Page Component
+
+```jsx
+import { BrandCard, BrandHeading, BrandTag, BrandLink } from './components/brand';
+
+export default function ProjectsPage() {
+  return (
+    <div className="min-h-screen bg-[var(--color-bg)]">
+      <main className="max-w-4xl mx-auto px-4 py-16">
+        <BrandHeading level={1} className="mb-6">
+          Projects
+        </BrandHeading>
+
+        <BrandCard hover={true} className="mb-8">
+          <BrandHeading level={2} className="mb-4">
+            Project Name
+          </BrandHeading>
+
+          <p className="text-[var(--color-text)] mb-4 font-['Inter',sans-serif]">
+            Project description
+          </p>
+
+          <div className="flex gap-2 mb-4">
+            <BrandTag>react</BrandTag>
+            <BrandTag>typescript</BrandTag>
+          </div>
+
+          <BrandLink href="/projects/details" external>
+            Learn More →
+          </BrandLink>
+        </BrandCard>
+      </main>
+    </div>
+  );
+}
+```
 
 ## Project Images
 

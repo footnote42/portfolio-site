@@ -1,6 +1,6 @@
 # Portfolio Site
 
-A modern, interactive portfolio website built with Next.js 16, React 19, and Tailwind CSS 4. Features dynamic project showcases with live GitHub integration, an interactive career timeline, and a hybrid JavaScript/TypeScript architecture.
+A modern, interactive portfolio website built with Next.js 16, React 19, and Tailwind CSS 4. Features a distinctive workshop aesthetic with electric cyan and amber accents, dynamic project showcases with live GitHub integration, an interactive career timeline, and a hybrid JavaScript/TypeScript architecture.
 
 **Latest**:
 Added Battlepoos (19 Dec 2025) - Battleships clone with a toilet humour twist.
@@ -9,12 +9,14 @@ Added Blog feature (13 Dec 2025) - markdown-based blog system with dynamic routi
 
 ## Features
 
+- **Workshop Aesthetic**: Custom brand system with deep slate background, electric cyan CTAs, and amber hover effects
+- **Brand Component Library**: Reusable components (BrandCard, BrandHeading, BrandLink, BrandButton, BrandTag) for consistent UI
 - **Dynamic Project Showcase**: Combines live GitHub repository data (stars, topics, URLs) with custom editorial content
 - **Interactive Timeline**: Visual journey through career milestones with expandable sections
 - **Blog System**: Markdown-based blog with frontmatter, dynamic routing, reading time estimates, and featured post support
 - **GitHub Integration**: Automatically fetches and displays repository information with 1-hour cache revalidation
 - **Project Status System**: Color-coded badges (`Unleashed`, `Active`, `Conceptual`, `Foundation`) with animations
-- **Responsive Design**: Mobile-first approach with dark mode support via system preferences
+- **Responsive Design**: Mobile-first approach with fixed color scheme (workshop aesthetic)
 - **React Compiler**: Experimental optimizations enabled for better performance
 - **Hybrid TypeScript/JavaScript**: Type safety where needed, flexibility elsewhere
 
@@ -22,9 +24,9 @@ Added Blog feature (13 Dec 2025) - markdown-based blog system with dynamic routi
 
 - **Framework**: Next.js 16.0.7 (App Router)
 - **UI Library**: React 19.2.0
-- **Styling**: Tailwind CSS 4.x via PostCSS
+- **Styling**: Tailwind CSS 4.x via PostCSS + Custom Brand System
 - **Languages**: TypeScript + JavaScript (hybrid approach)
-- **Fonts**: Geist Sans and Geist Mono
+- **Typography**: JetBrains Mono (headings) and Inter (body)
 - **API**: GitHub REST API v3
 - **Analytics**: Vercel Analytics 1.6.1
 
@@ -75,6 +77,13 @@ app/
 │   ├── about/                # Biography and approach
 │   └── contact/              # Contact information
 ├── components/
+│   ├── brand/                # Brand component library
+│   │   ├── BrandCard.tsx     # Container component
+│   │   ├── BrandHeading.tsx  # Heading component
+│   │   ├── BrandLink.tsx     # Link component
+│   │   ├── BrandButton.tsx   # Button component
+│   │   ├── BrandTag.tsx      # Tag/badge component
+│   │   └── index.ts          # Component exports
 │   ├── Navigation.tsx        # Site navigation (TypeScript)
 │   └── ProjectCard.js        # Project display component (JavaScript)
 ├── globals.css               # Tailwind theme tokens and custom CSS
