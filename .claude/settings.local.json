@@ -16,7 +16,18 @@
       "mcp__playwright__browser_navigate",
       "mcp__playwright__browser_take_screenshot",
       "mcp__playwright__browser_resize",
-      "mcp__playwright__browser_close"
+      "mcp__playwright__browser_close",
+      "Skill(sc:implement)",
+      "Bash(npx kill-port:*)",
+      "mcp__playwright__browser_console_messages",
+      "Bash(timeout /t 5 /nobreak)",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_snapshot",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git merge:*)",
+      "Bash(git branch:*)"
     ]
   }
 }

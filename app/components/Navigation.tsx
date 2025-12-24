@@ -14,7 +14,7 @@ export default function Navigation() {
 
           <div className="flex gap-6 text-sm">
             <BrandLink
-              href="/#projects"
+              href="/projects"
               className="text-[var(--color-text)] opacity-70 hover:opacity-100 hover:text-[var(--color-accent-amber)] transition-all font-['Inter',sans-serif]"
             >
               Projects

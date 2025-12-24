@@ -6,7 +6,6 @@ export const projects = [
     topics: ["react", "ai", "sports"],
     githubUrl: "https://github.com/yourusername/rugby-session-planner",
     homepage: "https://rugby-planner.vercel.app",
-    //image: "/images/rugby-planner.jpg", // We'll handle this next
     featured: true,
     status: "Active",
     hoverReveal: "Built this after watching coaches spend their evenings planning sessions"
