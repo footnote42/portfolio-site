@@ -168,16 +168,16 @@
 - [x] 131. Commit: "brand: migrate navigation component"
 - [x] 132. Remove backup file
 
-## Phase 11: Cleanup & Polish
+## Phase 11: Cleanup & Polish ✅ (COMPLETE)
 
-- [ ] 133. Remove old CSS variables from `globals.css` (--background, --foreground)
-- [ ] 134. Remove dark mode media query from `globals.css`
-- [ ] 135. Update body styles to use brand colors permanently
-- [ ] 136. Search codebase for remaining `dark:*` utilities
-- [ ] 137. Remove any leftover Tailwind dark mode classes
-- [ ] 138. Run `npm run build` - verify success
-- [ ] 139. Test all pages one final time
-- [ ] 140. Commit: "brand: remove old theme system"
+- [x] 133. Remove old CSS variables from `globals.css` (--background, --foreground)
+- [x] 134. Remove dark mode media query from `globals.css`
+- [x] 135. Update body styles to use brand colors permanently
+- [x] 136. Search codebase for remaining `dark:*` utilities
+- [x] 137. Remove any leftover Tailwind dark mode classes
+- [x] 138. Run `npm run build` - verify success
+- [x] 139. Test all pages one final time
+- [x] 140. Commit: "brand: remove old theme system"
 
 ## Phase 12: Documentation
 
@@ -212,8 +212,8 @@
 ## Task Summary
 
 **Total Tasks:** 162
-**Completed:** 132 (Phases 1-10)
-**Remaining:** 30
+**Completed:** 140 (Phases 1-11)
+**Remaining:** 22
 
 **Breakdown by Phase:**
 - ✅ Phase 1: Preparation (5 tasks)
@@ -226,7 +226,7 @@
 - ✅ Phase 8: Projects Page (17 tasks)
 - ✅ Phase 9: Homepage (21 tasks)
 - ✅ Phase 10: Navigation (10 tasks)
-- ⏳ Phase 11: Cleanup (8 tasks)
+- ✅ Phase 11: Cleanup (8 tasks)
 - ⏳ Phase 12: Documentation (7 tasks)
 - ⏳ Phase 13: Deployment (15 tasks)
 
