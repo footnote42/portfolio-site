@@ -11,11 +11,11 @@ interface Milestone {
   title: string;
   preview: string;
   details: string[];
-  phase: 1 | 2 | 3 | 4;
+  phase: 1 | 2 | 3 | 4 | 5;
 }
 
 interface Phase {
-  id: 1 | 2 | 3 | 4;
+  id: 1 | 2 | 3 | 4 | 5;
   title: string;
   period: string;
   quote?: string;
@@ -26,6 +26,7 @@ const phases: Phase[] = [
   { id: 2, title: 'Building Real Tools', period: 'October 2025' },
   { id: 3, title: 'Shipping with Confidence', period: 'November 2025' },
   { id: 4, title: 'Experimenting with Ideas', period: 'December 2025', quote: 'Not every project needs to solve a problem today. Sometimes you build to understand what\'s possible.' },
+  { id: 5, title: 'Structure Without Suffocation', period: 'December 2025', quote: 'Putting just enough framework in place to stay in flow.' },
 ];
 
 const milestones: Milestone[] = [
@@ -153,6 +154,22 @@ const milestones: Milestone[] = [
       'Not solving a problem - exploring what\'s possible with multiplayer games',
     ],
     phase: 4,
+  },
+  {
+    id: 'm11',
+    date: 'Dec 2025',
+    title: 'Structure Without Suffocation',
+    preview: 'This phase marked the point where vibe coding stopped feeling chaotic and started feeling calm',
+    details: [
+      'Wasn\'t building less — was deciding better. Lightweight structure gave momentum without killing curiosity, and tools began to fade into the background',
+      'Built and deployed small, experimental tools while exploring AI-assisted validation and decision support',
+      'Took a multi-model AI concept from idea to live deployment, proving structure could scale without slowing down',
+      'Shipped rapid, one-day builds to test ideas quickly and keep momentum high',
+      'Re-established a sustainable build rhythm that balanced utility projects with playful experimentation',
+      'Accepted that not everything needs finishing — progress matters more than polish at this stage',
+      'This was the moment structure stopped feeling like overhead and started feeling like freedom',
+    ],
+    phase: 5,
   },
 ];
 
