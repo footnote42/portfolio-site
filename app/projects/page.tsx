@@ -97,7 +97,7 @@ export default async function ProjectsPage() {
                 <BrandLink
                   href={project.homepage || project.githubUrl}
                   external
-                  className="inline-flex items-center gap-2 font-medium text-sm px-4 py-2.5 rounded-full bg-[var(--color-accent-cyan)] text-[#00141a] border border-transparent shadow-[var(--glow-cyan)] hover:shadow-[0_0_40px_rgba(0,217,255,0.3)] hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-flex items-center gap-2 font-medium text-sm px-4 py-2.5 rounded-full bg-[var(--color-accent-cyan)] text-[var(--color-bg)] border border-transparent shadow-[var(--glow-cyan)] hover:shadow-[0_0_40px_rgba(0,217,255,0.3)] hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Try It Live →
                 </BrandLink>

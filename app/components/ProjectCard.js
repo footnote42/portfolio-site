@@ -72,7 +72,7 @@ export default function ProjectCard({ project }) {
           <BrandLink
             href={project.homepage || project.githubUrl}
             external
-            className="flex-1 px-4 py-2 text-center text-sm bg-[var(--color-accent-cyan)] text-[#00141a] rounded-full hover:shadow-[0_0_40px_rgba(0,217,255,0.3)] hover:-translate-y-0.5 transition-all duration-300 font-medium"
+            className="flex-1 px-4 py-2 text-center text-sm bg-[var(--color-accent-cyan)] text-[var(--color-bg)] rounded-full hover:shadow-[0_0_40px_rgba(0,217,255,0.3)] hover:-translate-y-0.5 transition-all duration-300 font-medium"
           >
             Try It →
           </BrandLink>
