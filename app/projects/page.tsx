@@ -23,7 +23,7 @@ export default async function ProjectsPage() {
             </p>
             <p className="text-[var(--color-text)] opacity-80 font-['Inter',sans-serif]">
               My approach: functional over fancy, clarity over complexity. The impediment to action
-              becomes the path forward—every obstacle teaches something new about building better tools.
+              becomes the path forward - every obstacle teaches something new about building better tools.
             </p>
           </div>
         </section>
