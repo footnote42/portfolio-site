@@ -1,27 +1,28 @@
 import { getProjects } from '../lib/getProjects';
 import Navigation from '../components/Navigation';
+import { BrandHeading, BrandCard, BrandTag, BrandButton, BrandLink } from '../components/brand';
 
 export default async function ProjectsPage() {
   const projects = await getProjects();
   
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-[var(--color-bg)]">
     <Navigation />
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-16">
         {/* Design Ethos Section */}
         <section className="mb-16">
-          <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100 mb-6">
+          <BrandHeading level={1} className="mb-6">
             Projects
-          </h1>
-          <div className="prose prose-slate dark:prose-invert max-w-none">
-            <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-              I build practical tools that solve real problems for volunteer coaches and practitioners. 
+          </BrandHeading>
+          <div className="max-w-none">
+            <p className="text-lg text-[var(--color-text)] leading-relaxed mb-4 font-['Inter',sans-serif]">
+              I build practical tools that solve real problems for volunteer coaches and practitioners.
               Each project starts with a clear need and iterates toward usefulness.
             </p>
-            <p className="text-slate-600 dark:text-slate-400">
-              My approach: functional over fancy, clarity over complexity. The impediment to action 
+            <p className="text-[var(--color-text)] opacity-80 font-['Inter',sans-serif]">
+              My approach: functional over fancy, clarity over complexity. The impediment to action
               becomes the path forward—every obstacle teaches something new about building better tools.
             </p>
           </div>
@@ -29,26 +30,26 @@ export default async function ProjectsPage() {
 
         {/* Project Sections */}
         {projects.map((project, index) => (
-          <section 
+          <section
             key={index}
             id={project.name.toLowerCase().replace(/\s+/g, '-')}
-            className="mb-16 pb-16 border-b border-stone-200 dark:border-slate-800 last:border-0"
           >
-            <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-4">
+          <BrandCard className="mb-8">
+            <BrandHeading level={2} className="mb-4">
               {project.name}
-            </h2>
-            
-            <p className="text-lg text-amber-600 dark:text-amber-500 mb-6">
+            </BrandHeading>
+
+            <p className="text-lg text-[var(--color-accent-amber)] mb-6 font-['Inter',sans-serif]">
               {project.tagline}
             </p>
 
             {/* Problem */}
             {project.problem && (
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold text-[var(--color-text)] uppercase tracking-wide mb-2 font-['JetBrains_Mono',monospace]">
                   The Problem
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400">
+                <p className="text-[var(--color-text)] opacity-80 font-['Inter',sans-serif]">
                   {project.problem}
                 </p>
               </div>
@@ -57,10 +58,10 @@ export default async function ProjectsPage() {
             {/* Obstacles */}
             {project.obstacles && (
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold text-[var(--color-text)] uppercase tracking-wide mb-2 font-['JetBrains_Mono',monospace]">
                   Current Challenges
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400">
+                <p className="text-[var(--color-text)] opacity-80 font-['Inter',sans-serif]">
                   {project.obstacles}
                 </p>
               </div>
@@ -69,17 +70,14 @@ export default async function ProjectsPage() {
             {/* Tech Stack */}
             {project.topics && project.topics.length > 0 && (
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold text-[var(--color-text)] uppercase tracking-wide mb-2 font-['JetBrains_Mono',monospace]">
                   Built With
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {project.topics.map((topic, i) => (
-                    <span 
-                      key={i}
-                      className="text-sm px-3 py-1 bg-stone-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 rounded"
-                    >
+                    <BrandTag key={i}>
                       {topic}
-                    </span>
+                    </BrandTag>
                   ))}
                 </div>
               </div>
@@ -87,39 +85,33 @@ export default async function ProjectsPage() {
 
             {/* Action Links */}
             <div className="flex flex-wrap gap-4 mt-8">
-              <a
-                href="/#projects"
-                className="px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-500 border border-stone-200 dark:border-slate-700 rounded-lg transition-colors"
-              >
+              <BrandLink href="/#projects" className="inline-flex items-center gap-2 px-4 py-2.5 bg-transparent text-[var(--color-text)] opacity-70 border border-[var(--color-border)] rounded-full hover:opacity-100 hover:border-[var(--color-accent-cyan)] transition-all">
                 ← Back to Projects
-              </a>
-    
-              <a
-                href="/projects"
-                className="px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-500 border border-stone-200 dark:border-slate-700 rounded-lg transition-colors"
-              >
+              </BrandLink>
+
+              <BrandLink href="/projects" className="inline-flex items-center gap-2 px-4 py-2.5 bg-transparent text-[var(--color-text)] opacity-70 border border-[var(--color-border)] rounded-full hover:opacity-100 hover:border-[var(--color-accent-cyan)] transition-all">
                 ↑ Top of Page
-              </a>
-    
+              </BrandLink>
+
               {(project.homepage || project.githubUrl) && (
-                <a
+                <BrandLink
                   href={project.homepage || project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition-colors font-medium"
+                  external
+                  className="inline-flex items-center gap-2 font-medium text-sm px-4 py-2.5 rounded-full bg-[var(--color-accent-cyan)] text-[#00141a] border border-transparent shadow-[var(--glow-cyan)] hover:shadow-[0_0_40px_rgba(0,217,255,0.3)] hover:-translate-y-0.5 transition-all duration-300"
                 >
                   Try It Live →
-                </a>
+                </BrandLink>
               )}
             </div>
+          </BrandCard>
           </section>
         ))}
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-stone-200 dark:border-slate-800 mt-32">
+      <footer className="border-t border-[var(--color-border)] mt-32">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <p className="text-sm text-slate-400 dark:text-slate-600 italic">
+          <p className="text-sm text-[var(--color-text)] opacity-60 italic font-['Inter',sans-serif]">
             What stands in the way becomes the way.
           </p>
         </div>
