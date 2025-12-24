@@ -1,47 +1,48 @@
-// app/components/Navigation.js
+import { BrandLink } from './brand';
+
 export default function Navigation() {
   return (
-    <nav className="border-b border-stone-200 dark:border-slate-800">
+    <nav className="border-b border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a 
-            href="/" 
-            className="text-xl font-semibold text-slate-800 dark:text-slate-100 hover:text-amber-600"
+          <BrandLink
+            href="/"
+            className="text-xl font-semibold text-[var(--color-text)] hover:text-[var(--color-accent-amber)] transition-colors font-['JetBrains_Mono',monospace]"
           >
             Wayne Ellis
-          </a>
-          
+          </BrandLink>
+
           <div className="flex gap-6 text-sm">
-            <a
+            <BrandLink
               href="/#projects"
-              className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
+              className="text-[var(--color-text)] opacity-70 hover:opacity-100 hover:text-[var(--color-accent-amber)] transition-all font-['Inter',sans-serif]"
             >
               Projects
-            </a>
-            <a
+            </BrandLink>
+            <BrandLink
               href="/blog"
-              className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
+              className="text-[var(--color-text)] opacity-70 hover:opacity-100 hover:text-[var(--color-accent-amber)] transition-all font-['Inter',sans-serif]"
             >
               Blog
-            </a>
-            <a
+            </BrandLink>
+            <BrandLink
               href="/journey"
-              className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
+              className="text-[var(--color-text)] opacity-70 hover:opacity-100 hover:text-[var(--color-accent-amber)] transition-all font-['Inter',sans-serif]"
             >
               Journey
-            </a>
-            <a
+            </BrandLink>
+            <BrandLink
               href="/about"
-              className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
+              className="text-[var(--color-text)] opacity-70 hover:opacity-100 hover:text-[var(--color-accent-amber)] transition-all font-['Inter',sans-serif]"
             >
               About
-            </a>
-            <a
+            </BrandLink>
+            <BrandLink
               href="/contact"
-              className="text-slate-600 hover:text-amber-600 dark:text-slate-300"
+              className="text-[var(--color-text)] opacity-70 hover:opacity-100 hover:text-[var(--color-accent-amber)] transition-all font-['Inter',sans-serif]"
             >
               Contact
-            </a>
+            </BrandLink>
           </div>
         </div>
       </div>
