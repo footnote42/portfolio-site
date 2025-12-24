@@ -54,7 +54,7 @@ export const customProjects = {
     problem: "Learning real-time multiplayer architecture, WebSocket communication patterns, and shared client-server state management.",
   },
 
-  "Pong_Redux": {
+  "pong-redux": {
     displayName: "Pong Redux",
     tagline: "Clone of the classic Pong game using React and Redux",
     image: "/images/projects/pong_redux.png",
