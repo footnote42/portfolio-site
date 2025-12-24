@@ -1,7 +1,7 @@
 ---
 title: "The Vibe Coding Shift"
 date: "2025-11-25"
-excerpt: "Four months ago, coding felt like a locked door. Now I'm shipping real tools. What changed wasn't the technology - it was realizing I'd been asking the wrong question."
+excerpt: "Four months ago, coding felt like a locked door. Now I'm shipping real tools. What changed wasn't the technology - it was realising I'd been asking the wrong question."
 slug: "the-vibe-coding-shift"
 featured: true
 ---
