@@ -1,9 +1,9 @@
 import { getBlogPost, getBlogPosts } from '../../lib/getBlogPosts';
 import Navigation from '../../components/Navigation';
-import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { notFound } from 'next/navigation';
+import { BrandHeading, BrandLink, BrandTag } from '../../components/brand';
 
 // Generate static params for all blog posts at build time
 export async function generateStaticParams() {
@@ -40,15 +40,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-[var(--color-bg)]">
       <Navigation />
 
       <main className="max-w-3xl mx-auto px-4 py-16">
         {/* Back to Blog Link */}
-        <Link
-          href="/blog"
-          className="inline-flex items-center text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors mb-8"
-        >
+        <BrandLink href="/blog" className="inline-flex items-center text-sm mb-8">
           <svg
             className="w-4 h-4 mr-2"
             fill="none"
@@ -63,74 +60,77 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             />
           </svg>
           Back to Blog
-        </Link>
+        </BrandLink>
 
         {/* Article Header */}
         <article>
           {/* Featured Badge */}
           {post.featured && (
             <div className="mb-4">
-              <span className="inline-block px-3 py-1 text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full">
-                Featured
-              </span>
+              <BrandTag>Featured</BrandTag>
             </div>
           )}
 
           {/* Date and Reading Time */}
-          <div className="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
-            <time className="font-mono">
+          <div className="flex items-center gap-3 text-sm text-[var(--color-text)] opacity-70 font-['Inter',sans-serif]">
+            <time className="font-['JetBrains_Mono',monospace]">
               {new Date(post.date).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
               })}
             </time>
-            <span className="text-slate-400 dark:text-slate-600">•</span>
+            <span className="opacity-50">•</span>
             <span>{post.readingTime} min read</span>
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-100 mt-3 mb-6 leading-tight">
+          <BrandHeading level={1} className="mt-3 mb-6">
             {post.title}
-          </h1>
+          </BrandHeading>
 
           {/* Excerpt */}
-          <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-12 pb-8 border-b border-slate-200 dark:border-slate-700">
+          <p className="text-xl text-[var(--color-text)] leading-relaxed mb-12 pb-8 border-b border-[var(--color-border)] font-['Inter',sans-serif]">
             {post.excerpt}
           </p>
 
           {/* Markdown Content */}
-          <div className="prose prose-slate dark:prose-invert prose-lg max-w-none">
+          <div className="max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
                 h1: ({ children }) => (
-                  <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100 mt-12 mb-4">
+                  <BrandHeading level={1} className="mt-12 mb-4">
                     {children}
-                  </h1>
+                  </BrandHeading>
                 ),
                 h2: ({ children }) => (
-                  <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mt-10 mb-4">
+                  <BrandHeading level={2} className="mt-10 mb-4">
                     {children}
-                  </h2>
+                  </BrandHeading>
                 ),
                 h3: ({ children }) => (
-                  <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-100 mt-8 mb-3">
+                  <BrandHeading level={3} className="mt-8 mb-3">
                     {children}
-                  </h3>
+                  </BrandHeading>
+                ),
+                h4: ({ children }) => (
+                  <BrandHeading level={4} className="mt-6 mb-3">
+                    {children}
+                  </BrandHeading>
                 ),
                 p: ({ children }) => (
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                  <p className="text-[var(--color-text)] leading-relaxed mb-6 font-['Inter',sans-serif]">
                     {children}
                   </p>
                 ),
                 ul: ({ children }) => (
-                  <ul className="list-disc list-inside space-y-2 mb-6 text-slate-700 dark:text-slate-300">
+                  <ul className="list-disc list-inside space-y-2 mb-6 text-[var(--color-text)] font-['Inter',sans-serif]">
                     {children}
                   </ul>
                 ),
                 ol: ({ children }) => (
-                  <ol className="list-decimal list-inside space-y-2 mb-6 text-slate-700 dark:text-slate-300">
+                  <ol className="list-decimal list-inside space-y-2 mb-6 text-[var(--color-text)] font-['Inter',sans-serif]">
                     {children}
                   </ol>
                 ),
@@ -138,39 +138,44 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <li className="ml-4">{children}</li>
                 ),
                 strong: ({ children }) => (
-                  <strong className="font-semibold text-slate-800 dark:text-slate-100">
+                  <strong className="font-semibold text-[var(--color-text)]">
                     {children}
                   </strong>
                 ),
                 em: ({ children }) => (
-                  <em className="italic text-slate-700 dark:text-slate-300">
+                  <em className="italic text-[var(--color-text)]">
                     {children}
                   </em>
                 ),
-                code: ({ children }) => (
-                  <code className="px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 rounded text-sm font-mono">
-                    {children}
-                  </code>
-                ),
+                code: ({ children, className }) => {
+                  // Inline code (no className) vs code block (has className)
+                  const isInline = !className;
+                  return (
+                    <code
+                      className={
+                        isInline
+                          ? "px-1.5 py-0.5 bg-[var(--color-surface)] text-[var(--color-accent-purple)] rounded text-sm font-['JetBrains_Mono',monospace]"
+                          : "text-[var(--color-text)] font-['JetBrains_Mono',monospace]"
+                      }
+                    >
+                      {children}
+                    </code>
+                  );
+                },
                 pre: ({ children }) => (
-                  <pre className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg overflow-x-auto mb-6">
+                  <pre className="bg-[var(--color-surface)] p-4 rounded-lg overflow-x-auto mb-6 border border-[var(--color-border)]">
                     {children}
                   </pre>
                 ),
                 blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-emerald-500 pl-4 italic text-slate-600 dark:text-slate-400 my-6">
+                  <blockquote className="border-l-4 border-[var(--color-accent-cyan)] pl-4 italic text-[var(--color-text)] opacity-80 my-6 font-['Inter',sans-serif]">
                     {children}
                   </blockquote>
                 ),
                 a: ({ children, href }) => (
-                  <a
-                    href={href}
-                    className="text-emerald-600 dark:text-emerald-400 hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <BrandLink href={href || '#'} external={href?.startsWith('http')}>
                     {children}
-                  </a>
+                  </BrandLink>
                 ),
               }}
             >
@@ -179,11 +184,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
 
           {/* Back to Blog Link (bottom) */}
-          <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
-            <Link
-              href="/blog"
-              className="inline-flex items-center text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-            >
+          <div className="mt-12 pt-8 border-t border-[var(--color-border)]">
+            <BrandLink href="/blog" className="inline-flex items-center text-sm">
               <svg
                 className="w-4 h-4 mr-2"
                 fill="none"
@@ -198,14 +200,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 />
               </svg>
               Back to Blog
-            </Link>
+            </BrandLink>
           </div>
         </article>
       </main>
 
-      <footer className="border-t border-stone-200 dark:border-slate-800 mt-32">
+      <footer className="border-t border-[var(--color-border)] mt-32">
         <div className="max-w-3xl mx-auto px-4 py-8">
-          <p className="text-sm text-slate-400 dark:text-slate-600 italic">
+          <p className="text-sm text-[var(--color-text)] opacity-60 italic font-['Inter',sans-serif]">
             What stands in the way becomes the way.
           </p>
         </div>
