@@ -52,5 +52,15 @@ export const customProjects = {
     featured: false,
     hoverReveal: "Full-stack TypeScript game with WebSocket multiplayer, built to explore real-time state synchronization",
     problem: "Learning real-time multiplayer architecture, WebSocket communication patterns, and shared client-server state management.",
+  },
+
+  "Pong_Redux": {
+    displayName: "Pong Redux",
+    tagline: "Clone of the classic Pong game using React and Redux",
+    image: "/images/projects/pong_redux.png",
+    status: "Unleashed",
+    featured: false,
+    hoverReveal: "Full-stack TypeScript game with WebSocket multiplayer, built to explore real-time state synchronization",
+    problem: "Revisiting my first project with the power of hindsight to improve and learn.",
   }
-};
+}
