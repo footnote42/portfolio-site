@@ -1,31 +1,32 @@
 import ProjectCard from './components/ProjectCard';
 import { getProjects } from './lib/getProjects';
 import Navigation from './components/Navigation';
+import { BrandHeading } from './components/brand';
 
 export default async function Home() {
   // Fetch projects at build time
   const projects = await getProjects();
   console.log('Projects data:', projects[0]); // Add this line
   const featuredProjects = projects.filter(p => p.featured);
-  
+
   return (
-    <div className="min-h-screen bg-stone-50 dark:bg-slate-900">
+    <div className="min-h-screen bg-[var(--color-bg)]">
       <Navigation />
-      
+
       <main className="max-w-6xl mx-auto px-4 py-16">
         <div className="max-w-2xl mb-16">
-          <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-            I'm a systems engineer learning to build software with AI collaboration. Coding's 
-            learning curve always felt too steep; until AI removed that excuse. Now I'm building 
+          <p className="text-lg text-[var(--color-text)] leading-relaxed font-['Inter',sans-serif]">
+            I'm a systems engineer learning to build software with AI collaboration. Coding's
+            learning curve always felt too steep; until AI removed that excuse. Now I'm building
             time-saving tools for rugby coaches and exploring whatever makes me curious.
           </p>
         </div>
 
         <section id="projects">
-          <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-8">
+          <BrandHeading level={2} className="mb-8">
             Featured Projects
-          </h2>
-          
+          </BrandHeading>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project, index) => (
               <ProjectCard key={index} project={project} />
@@ -33,10 +34,10 @@ export default async function Home() {
           </div>
 
           <div className="mt-16">
-            <h2 className="text-2xl font-semibold text-slate-800 dark:text-slate-100 mb-8">
+            <BrandHeading level={2} className="mb-8">
               All Projects
-            </h2>
-            
+            </BrandHeading>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
@@ -46,9 +47,9 @@ export default async function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-stone-200 dark:border-slate-800 mt-32">
+      <footer className="border-t border-[var(--color-border)] mt-32">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <p className="text-sm text-slate-400 dark:text-slate-600 italic">
+          <p className="text-sm text-[var(--color-text)] opacity-60 italic font-['Inter',sans-serif]">
             What stands in the way becomes the way.
           </p>
         </div>
