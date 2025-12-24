@@ -60,7 +60,7 @@ export const customProjects = {
     image: "/images/projects/pong_redux.png",
     status: "Unleashed",
     featured: false,
-    hoverReveal: "Full-stack TypeScript game with WebSocket multiplayer, built to explore real-time state synchronization",
+    hoverReveal: "My first attempt at building a Pong clone was classic 'black box' vibe coding. This time I focused on clean architecture and state management.",
     problem: "Revisiting my first project with the power of hindsight to improve and learn.",
   }
 }
