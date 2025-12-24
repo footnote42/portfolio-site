@@ -331,6 +331,142 @@ The current portfolio uses generic Tailwind colors and system dark mode. The bra
 
 ---
 
-**Specification Version:** 1.0
-**Last Updated:** December 23, 2025
+## Brand Identity Reference
+
+### Brand Essence
+
+**Core Identity:** Thoughtful Tinkerer
+You're not selling services—you're documenting experiments. Your portfolio is a lab notebook that happens to be beautiful.
+
+**Visual Philosophy:** Dark Workshop Aesthetic
+Think: late-night coding sessions, glowing monitors, the satisfying hum of systems working. Professional depth with sparks of curiosity.
+
+### Tone of Voice
+
+**Key Descriptors:** Direct • Curious • Understated • Reflective • Pragmatic
+
+**Do's:**
+- Be specific: "Built X to solve Y" not "innovative solutions"
+- Show process: Mention dead ends and pivots
+- Use first person: "I built this because..."
+- Admit gaps: "Still learning X" is authentic
+- Occasional dry humor: Understatement, unexpected phrasing
+
+**Avoid:**
+- Buzzwords: "passionate," "rockstar," "guru," "ninja"
+- Overselling: "game-changing," "revolutionary"
+- Humble brags: "just a simple tool I made..."
+- Marketing speak: "leverage synergies"
+- Apologizing for learning
+
+### Brand Invariants (Non-Negotiables)
+
+These constraints define the brand. If broken, the work is no longer on-brand:
+
+1. **The Brand Is a Record of Thinking, Not a Sales Surface**
+   - Portfolio documents experiments, learning, and iteration
+   - Projects must include reasoning, trade-offs, or lessons
+   - Copy explains _why_ something exists before _what_ it is
+
+2. **Understated Confidence, Never Performance**
+   - Tone is direct, reflective, and pragmatic. No hype. No apology
+   - First-person voice is mandatory
+   - Gaps are stated plainly, without disclaimers
+
+3. **Dark Workshop Aesthetic Is the Default State**
+   - Deep Slate is always the base
+   - Light mode, if added, is secondary and restrained
+   - Contrast is engineered for long reading, not visual punch
+
+4. **Delight Is a Reward for Curiosity**
+   - Interaction never demands attention. It reveals itself
+   - No compulsory animations
+   - Easter eggs are hidden, not announced
+
+5. **Polish Serves Clarity, Not Impressiveness**
+   - Everything should feel well-made, but not made to impress
+   - Simple layouts beat clever ones
+   - One "neat" moment per surface is enough
+
+### Sanctioned Brand Variations
+
+**Quiet Utility** (for tools, dashboards, data-heavy views)
+- Calm, trustworthy, unshowy competence
+- Minimal accent color usage
+- Low interaction intensity
+- Example: "A small tool to track what actually happened last time."
+
+**Reflective Showcase** (for project pages, case studies, portfolio narratives)
+- Curiosity, thoughtfulness, earned confidence
+- Clear content hierarchy with generous whitespace
+- Medium interaction intensity
+- Example: "This worked well until it didn't—and that's where it got interesting."
+
+**Playful Precision** (for experimental projects, easter eggs)
+- Curiosity, lightness, enjoyment of constraints
+- Slightly stronger glow, more visible accent color
+- Medium-high interaction (but still optional)
+- Example: "I wasn't sure this was a good idea. I built it anyway."
+
+### Accessibility Standards
+
+**WCAG Contrast Ratios:**
+- Electric Cyan on Deep Slate: **4.8:1** (WCAG AA for large text) ✓
+- Warm White on Deep Slate: **14.2:1** (WCAG AAA) ✓
+- Amber Glow on Deep Slate: **5.1:1** (WCAG AA) ✓
+- Body text always uses Warm White on Deep Slate
+
+### Micro-Interactions (Quality Over Quantity)
+
+1. **Code Block Copy Button** - Appears on hover, check icon with cyan glow feedback
+2. **Project Tags** - Glow faintly when cursor nearby
+3. **Scroll Progress Indicator** - Thin cyan line at top, fills as you scroll
+4. **Konami Code Easter Egg** - Reveals hidden "workshop mode"
+5. **Link Previews** - Tiny preview tooltip on long hover
+6. **Ambient Glow** - Subtle radial gradient following cursor (flashlight in workshop)
+7. **Arrow Animations** - Arrows glide right on hover
+
+**What NOT to Do:**
+- No confetti explosions
+- No aggressive animations that distract
+- No "click here!" flashing
+- No auto-playing anything
+- No pop-ups
+
+### Success Metrics
+
+Brand is working when:
+1. **Recognition**: Someone sees screenshot and says "that's your site"
+2. **Consistency**: New pages feel cohesive without copying/pasting
+3. **Authenticity**: You don't cringe at your own copy
+4. **Engagement**: People explore beyond homepage (analytics confirm)
+5. **Memorability**: Someone recommends portfolio to curious beginner
+
+### Anti-Patterns
+
+**Never Do:**
+- Startup-speak
+- Feature lists without context
+- Over-polished hero sections
+- Loud gradients or neon blasts
+- Apologizing for learning
+
+**Common Drift Traps:**
+- Adding interaction to mask uncertainty
+- Writing as if being evaluated
+- Explaining jokes
+- Chasing uniqueness instead of clarity
+
+**Course Correction:**
+If something feels off, ask:
+- Am I informing or impressing?
+- Is this optional for the user?
+- Would this still work without animation?
+- Does this show thinking, or just outcome?
+
+---
+
+**Specification Version:** 1.1 (Enhanced with brand identity reference)
+**Last Updated:** December 24, 2025 (added brand invariants, variations, and anti-patterns)
+**Previous Version:** 1.0 (December 23, 2025)
 **Next Step:** Create implementation plan (`plan.md`)
